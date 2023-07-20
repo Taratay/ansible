@@ -1,0 +1,14 @@
+---
+- name: Update and Upgrade packages remote
+  hosts: webservers
+  remote_user: "{{ remote_user }}"
+  roles:
+    - apt
+
+- name: Update and Upgrade packages localy
+  connection: local
+  hosts: localhost
+  gather_facts: no
+  remote_user: "{{ remote_user }}"
+  roles:
+    - apt

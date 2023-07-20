@@ -1,0 +1,14 @@
+---
+
+  - name: Update all packages to their latest version
+    ansible.builtin.apt:
+      name: "*"
+      state: latest
+    become: yes
+    become_user: root 
+  
+  - name: Upgrade all packages 
+    ansible.builtin.apt:
+      upgrade: yes
+    become: yes
+    become_user: root
