@@ -1,6 +1,6 @@
 [webservers]
 pi.hole
-192.168.0.81
+opi.hole
 
 [localhost]
 127.0.0.1
